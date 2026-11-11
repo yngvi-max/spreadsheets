@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex, nofollow">
+<title>Just Build It Ourselves</title>
+<meta name="description" content="A spreadsheet engine simulator. Survive four quarters of real spreadsheet problems, or license an engine instead.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1><small>A spreadsheet engine simulator</small>Just Build It Ourselves</h1>
+    <div class="sprint" id="sprint"><b>Q1</b>sprint 1 of 10</div>
+  </header>
+
+  <section class="meters" id="meters" aria-label="Project health">
+    <div class="meter" data-m="velocity"><span class="lab">Sprint velocity</span><span class="val"><span class="delta"></span><span class="num">60</span></span><span class="bar"><i></i></span></div>
+    <div class="meter" data-m="debt"><span class="lab">Tech debt</span><span class="val"><span class="delta"></span><span class="num">30</span></span><span class="bar"><i></i></span></div>
+    <div class="meter" data-m="sanity"><span class="lab">Team sanity</span><span class="val"><span class="delta"></span><span class="num">60</span></span><span class="bar"><i></i></span></div>
+    <div class="meter" data-m="trust"><span class="lab">Customer trust</span><span class="val"><span class="delta"></span><span class="num">60</span></span><span class="bar"><i></i></span></div>
+    <div class="fnrow"><span>Excel compatibility</span><span><b id="fncount">0</b> of 500+ functions</span></div>
+  </section>
+
+  <section class="card intro" id="intro">
+    <div class="card-head"><div class="avatar">PM</div><div><div class="who">Katrín, Product</div><div class="chan">#planning · Monday 09:02</div></div></div>
+    <div class="card-body">
+      <p>Quick one. In the customer call on Friday you said spreadsheets are "basically just a grid of numbers".</p>
+      <p>So I've told Nordfin we'll have full spreadsheet support by the end of Q2. You own it. Congrats!</p>
+      <p>Keep <b>velocity</b>, <b>sanity</b> and <b>trust</b> above zero, keep <b>tech debt</b> below 100, and try to get to 500 functions. How hard can it be?</p>
+    </div>
+    <div class="choices"><button class="choice" id="start"><span class="key">↵</span><span>Fine. I'll build the engine.</span></button></div>
+  </section>
+
+  <section class="card" id="play" hidden>
+    <div class="card-head"><div class="avatar" id="av">?</div><div><div class="who" id="who"></div><div class="chan" id="chan"></div></div></div>
+    <div class="card-body" id="text"></div>
+    <div class="choices">
+      <button class="choice" id="optA"><span class="key">1</span><span id="labA"></span></button>
+      <button class="choice" id="optB"><span class="key">2</span><span id="labB"></span></button>
+    </div>
+    <p class="result" id="result">Every message is real. Nothing here needed inventing.</p>
+  </section>
+
+  <section id="review" hidden></section>
+
+  <div class="license" id="licenseWrap">
+    <div>
+      <button id="licenseBtn" disabled>License an engine instead</button>
+      <span class="tip" id="licenseTip">Not now. We're almost done.</span>
+    </div>
+  </div>
+
+  <footer>A prototype for <a href="https://grid.is" target="_blank" rel="noopener noreferrer">GRID</a>. Every card is a real spreadsheet problem.</footer>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
